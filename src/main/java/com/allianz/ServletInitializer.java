@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  Inside SERVER$$$$$$$$$$$$$$$$$$$$$$$$$");
 		return application.sources(AllianzTimeTrackerApplication.class);
 	}
-
 }

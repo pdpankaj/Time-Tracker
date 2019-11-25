@@ -3,6 +3,7 @@ package com.allianz.controller;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -11,6 +12,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,9 +22,10 @@ import com.allianz.config.JwtTokenUtil;
 import com.allianz.model.JwtRequest;
 import com.allianz.model.JwtResponse;
 
+
+@CrossOrigin(origins = "*")
 @RestController
-//@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RequestMapping(path = "/Time-Tracker")
 public class JwtAuthenticationController {
 
 	@Autowired
@@ -34,11 +37,13 @@ public class JwtAuthenticationController {
 	@Autowired
 	private UserDetailsService jwtInMemoryUserDetailsService;
 
-	@RequestMapping(value = "/Time-Tracker/authenticate", method = RequestMethod.POST)
+	@PostMapping(value = "/authenticate")
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
 			throws Exception {
-System.out.println("authenticationRequest.getUsername() "+authenticationRequest.getUsername());
-System.out.println("authenticationRequest.getPassword() "+authenticationRequest.getPassword());
+		
+		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  authenticate $$$$$$$$$$$$$$$$$$$$$$$$$");
+		
+		
 		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
 
 		final UserDetails userDetails = jwtInMemoryUserDetailsService

@@ -3,6 +3,7 @@ package com.allianz.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,10 +18,9 @@ import com.allianz.repository.EmployeeRepository;
 import com.allianz.service.EmployeeService;
 import com.allianz.service.exceptions.EmployeeNotFoundException;
 
-//@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping({ "/Time-Tracker/employees" })
+@RequestMapping(path = "/Time-Tracker/employees")
 public class AllianzEmployeeController {
 
 	@Autowired

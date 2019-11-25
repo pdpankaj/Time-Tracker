@@ -2,6 +2,7 @@ com\allianz\config\JwtRequestFilter.class
 com\allianz\repository\EmployeeRepository.class
 com\allianz\repository\EmployeeRepositoryImpl$1.class
 com\allianz\service\exceptions\EmployeeNotFoundException.class
+com\allianz\config\RestConfig.class
 com\allianz\service\EmployeeService.class
 com\allianz\service\exceptions\DuplicateUserException.class
 com\allianz\ServletInitializer.class
@@ -20,5 +21,6 @@ com\allianz\repository\EmployeeRepositoryImpl.class
 com\allianz\model\JwtResponse.class
 com\allianz\AllianzTimeTrackerApplication.class
 com\allianz\config\JwtAuthenticationEntryPoint.class
+com\allianz\config\SpringCorsConfig.class
 com\allianz\repository\EmployeeRepositoryImpl$2.class
 com\allianz\controller\HelloWorldController.class
