@@ -1056,7 +1056,7 @@ var AuthenticationService = /** @class */ (function () {
         this.httpClient = httpClient;
     }
     AuthenticationService.prototype.authenticate = function (username, password) {
-        return this.httpClient.post('http://' + window.location.hostname + ':8080/Time-Tracker/authenticate', { username: username, password: password }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (userData) {
+        return this.httpClient.post('http://' + window.location.hostname + ':8080/Time-Tracker-0.0.1-SNAPSHOT/Time-Tracker/authenticate', { username: username, password: password }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (userData) {
             sessionStorage.setItem('username', username);
             var tokenStr = 'Bearer ' + userData.token;
             sessionStorage.setItem('token', tokenStr);
@@ -1067,7 +1067,6 @@ var AuthenticationService = /** @class */ (function () {
         var user = sessionStorage.getItem('username');
         //console.log(!(user === null))
         return !(user === null);
-        //return true;
     };
     AuthenticationService.prototype.logOut = function () {
         sessionStorage.removeItem('username');
@@ -1132,19 +1131,19 @@ var HttpClientService = /** @class */ (function () {
     }
     HttpClientService.prototype.getEmployees = function () {
         console.log('******   getEmployees');
-        return this.httpClient.get('http://' + window.location.hostname + ':8080/Time-Tracker/employees');
+        return this.httpClient.get('http://' + window.location.hostname + ':8080/Time-Tracker-0.0.1-SNAPSHOT/Time-Tracker/employees');
     };
     HttpClientService.prototype.getEmployeeByEmailId = function () {
         console.log('******   getEmployeeByEmailId');
-        return this.httpClient.get("http://" + window.location.hostname + ":8080/Time-Tracker/employees" + "/email/" + this.getEmployeeEmailId());
+        return this.httpClient.get("http://" + window.location.hostname + ":8080/Time-Tracker-0.0.1-SNAPSHOT/Time-Tracker/employees" + "/email/" + this.getEmployeeEmailId());
     };
     HttpClientService.prototype.deleteEmployee = function (employee) {
         console.log('deleteEmployee');
-        return this.httpClient.delete("http://" + window.location.hostname + ":8080/Time-Tracker/employees" + "/" + employee.empId);
+        return this.httpClient.delete("http://" + window.location.hostname + ":8080/Time-Tracker-0.0.1-SNAPSHOT/Time-Tracker/employees" + "/" + employee.empId);
     };
     HttpClientService.prototype.createEmployee = function (employee) {
         console.log('****  createEmployee ' + employee);
-        return this.httpClient.post("http://" + window.location.hostname + ":8080/Time-Tracker/employees", employee);
+        return this.httpClient.post("http://" + window.location.hostname + ":8080/Time-Tracker-0.0.1-SNAPSHOT/Time-Tracker/employees", employee);
     };
     HttpClientService.prototype.getEmployeeId = function () {
         return this.remployeeId;
