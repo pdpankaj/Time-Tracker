@@ -1,6 +1,5 @@
 package com.allianz.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ import com.allianz.service.exceptions.EmployeeNotFoundException;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping({ "/employees" })
+@RequestMapping({ "/Time-Tracker/employees" })
 public class AllianzEmployeeController {
 
 	@Autowired
