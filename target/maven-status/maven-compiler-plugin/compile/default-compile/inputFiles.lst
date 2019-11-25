@@ -1,4 +1,3 @@
-C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\config\SpringCorsConfig.java
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\service\EmployeeService.java
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\config\JwtRequestFilter.java
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\service\exceptions\EmployeeNotFoundException.java
@@ -17,7 +16,6 @@ C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\service\EmployeeServ
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\service\exceptions\DuplicateUserException.java
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\model\JwtRequest.java
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\config\HazelcastConfiguration.java
-C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\config\RestConfig.java
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\ServletInitializer.java
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\controller\AllianzEmployeeController.java
 C:\PP\_Java_Practice\Time-Tracker\src\main\java\com\allianz\repository\EmployeeRepository.java

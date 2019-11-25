@@ -1,4 +1,9 @@
-From tomcat:8.0.51-jre8-alpine
-RUN rm -rf /usr/local/tomcat/webapps/*
-COPY ./docker-resources/Time-Tracker.war /usr/local/tomcat/webapps/Time-Tracker.war
-CMD ["catalina.sh","run"]
+FROM tomcat:8.0.43-jre8
+
+COPY ./docker-resources/Time-Tracker-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
+
+COPY ./docker-resources/UI/Time-Tracker-Client/* /usr/local/tomcat/webapps/ROOT/
+
+#CMD ["catalina.sh","run"]
+
+EXPOSE 8080:8080 
