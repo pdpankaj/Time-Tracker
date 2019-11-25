@@ -4,6 +4,7 @@ com\allianz\repository\EmployeeRepositoryImpl$1.class
 com\allianz\service\exceptions\EmployeeNotFoundException.class
 com\allianz\service\EmployeeService.class
 com\allianz\service\exceptions\DuplicateUserException.class
+com\allianz\ServletInitializer.class
 com\allianz\model\JwtRequest.class
 com\allianz\controller\AllianzEmployeeController.class
 com\allianz\config\WebSecurityConfig.class
