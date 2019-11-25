@@ -21,7 +21,8 @@ import com.allianz.model.JwtRequest;
 import com.allianz.model.JwtResponse;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class JwtAuthenticationController {
 
 	@Autowired

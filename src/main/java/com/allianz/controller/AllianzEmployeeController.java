@@ -17,7 +17,8 @@ import com.allianz.repository.EmployeeRepository;
 import com.allianz.service.EmployeeService;
 import com.allianz.service.exceptions.EmployeeNotFoundException;
 
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping({ "/Time-Tracker/employees" })
 public class AllianzEmployeeController {
