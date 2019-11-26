@@ -97,7 +97,7 @@ var AddEmployeeComponent = /** @class */ (function () {
             emailId: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]],
             inTime: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             outTime: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
-        }, { validators: this.InOutTimeValidation });
+        });
         var existingEmployee = this.httpClientService.getEmployee();
         if (existingEmployee) {
             //this.httpClientService.getEmployeeByEmailId().subscribe(

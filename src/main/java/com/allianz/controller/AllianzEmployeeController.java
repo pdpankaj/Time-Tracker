@@ -36,9 +36,6 @@ public class AllianzEmployeeController {
 	public List<Employee> firstPage() {
 		System.out.println("Inside first page API");
 		List<Employee> list = employeeRepository.getAllEmployees();
-		if(list.isEmpty()) {
-			throw new EmployeeNotFoundException();
-		}
 		return list;
 	}
 
